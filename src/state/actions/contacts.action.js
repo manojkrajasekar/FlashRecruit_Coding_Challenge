@@ -1,5 +1,7 @@
 import uuid from 'uuid';
 
+//Action for adding the contact
+//uuid is a package provided by node, which automatically generates an id
 export const addContact = (
         { 
             id = 0,
@@ -19,6 +21,7 @@ export const addContact = (
         }
     });
 
+//Action for editing the contact
 export const editContact = (id, update) => {
     return {
         type: 'EDIT_CONTACT',
@@ -27,6 +30,7 @@ export const editContact = (id, update) => {
     }
 };
 
+//Action for removing the contact
 export const removeContact = ({id} = {}) => ({
     type: 'REMOVE_CONTACT',
     id

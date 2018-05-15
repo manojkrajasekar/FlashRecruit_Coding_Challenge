@@ -16,12 +16,14 @@ class ContactListItem extends Component {
         this.editContactDetails = this.editContactDetails.bind(this);
     }
 
+    //This method sets the state of the editform, based on which the edit form is rendered.
     editContactDetails = () => {
         this.setState({
             isEditForm:!this.state.isEditForm
         })        
     }
 
+    //Action for deleting a contact is called here.
     deleteContactDetails = () => {
         store.dispatch(removeContact({id:this.props.contact.id}));
     }
